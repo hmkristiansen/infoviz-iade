@@ -1,46 +1,87 @@
 * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
-html{
-    font-size: 16px;
-    scroll-behavior: smooth;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
+  width: 100%;
+  height: 4000px;
+  margin: 0;
+  padding: 0;
 }
 
-#blob_container{
-    width: 100%;
-    padding-top: 50%;
-    justify-content: center;
-    position: relative;
-
-    position: -webkit-sticky;
-    position: sticky;
-    top: 50%;
+#blob_container {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.blob{
-    bottom: 0;
-    position: relative;
+.blob {
+  -webkit-transition: inherit;
+  transition: inherit;
+  top: 0;
+  position: relative;
+  border-radius: 20px;
 }
 
-#blob1{
-    left: 40%;
-    width: 100px;
-    height: 100px;
-    background-color: palevioletred;
+#blob1 {
+  left: 40%;
+  width: 100px;
+  height: 100px;
+  background-color: palevioletred;
 }
-#blob2{
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: bisque;
+
+#blob2 {
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
 }
+
+.mode1 #blob1 {
+  background-color: red;
+  left: 30%;
+  -webkit-transform: translateY(-10vh);
+          transform: translateY(-10vh);
+}
+
+.mode1 #blob2 {
+  left: 70%;
+  -webkit-transform: translateY(15vh);
+          transform: translateY(15vh);
+  background-color: blue;
+}
+
+.mode2 #blob1 {
+  background-color: yellow;
+  left: 70%;
+}
+
+.mode2 #blob2 {
+  left: 30%;
+  background-color: green;
+}
+
+.mode3 #blob1 {
+  background-color: peachpuff;
+  left: 10%;
+}
+
+.mode3 #blob2 {
+  left: 40%;
+  background-color: brown;
+}
+/*# sourceMappingURL=style.css.map */
